@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+	<Properties>
+		<Property name="LOG_PATTERN">
+			%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %-40.40c{1.} : %m%n%ex
+		</Property>
+		<Property name="APPLOG_ROLLING_FILENAME">logs/application.log</Property>
+		<Property name="APPLOG_ROLLING_FILEPATTERN">logs/archive/application_%d{yyyy-MM-dd}.log.zip</Property>
+		
+		<Property name="FMKLOG_FILENAME">logs/frameworks.log</Property>
+		<Property name="CXFLOG_FILENAME">logs/cxf.log</Property>
+		<Property name="HIBLOG_FILENAME">logs/hibernate.log</Property>
+		<Property name="HIKLOG_FILENAME">logs/hikaricp.log</Property>
+		<Property name="SPRLOG_FILENAME">logs/spring.log</Property>
+	</Properties>
+	
+	<Appenders>
+		<!-- The immediateFlush attribute specifies whether to write the log event
+		to the log file immediately or not, set attribute to false when using Async
+		loggers to log multiple (batch) events in a single disc write -->
+		
+		<Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
+			<PatternLayout pattern="${LOG_PATTERN}"/>
+		</Console>
+		
+		<!-- File name="FmkLogFileAppender" fileName="${FMKLOG_FILENAME}" immediateFlush="true" append="true">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</File>
+		<File name="CxfLogFileAppender" fileName="${CXFLOG_FILENAME}" immediateFlush="true" append="true">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</File>
+		<File name="HibernateLogFileAppender" fileName="${HIBLOG_FILENAME}" immediateFlush="true" append="true">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</File>
+		<File name="HikariCPLogFileAppender" fileName="${HIKLOG_FILENAME}" immediateFlush="true" append="true">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</File -->
+		<File name="SpringLogFileAppender" fileName="${SPRLOG_FILENAME}" immediateFlush="true" append="true">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</File>
+		
+		<RollingFile name="AppLogRollingFileAppender" fileName="${APPLOG_ROLLING_FILENAME}" filePattern="${APPLOG_ROLLING_FILEPATTERN}">
+			<PatternLayout pattern="${LOG_PATTERN}"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+				<SizeBasedTriggeringPolicy size="100 MB"/>
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	
+	<Loggers>
+		<Logger name="corp.pdb.sio.demo" level="trace" additivity="false">
+			<!-- The additivity attribute specifies whether or not the parent logger (i.e.
+			the root logger) will write (for the second time) events covered within the
+			scope of this logger -->
+			<AppenderRef ref="ConsoleAppender"/>
+			<AppenderRef ref="AppLogRollingFileAppender"/>
+		</Logger>
+		<!-- Logger name="com.zaxxer.hikari" level="info" additivity="false">
+			<AppenderRef ref="HikariCPLogFileAppender"/>
+		</Logger>
+		<Logger name="org.apache.cxf.interceptor" level="info" additivity="false">
+			<AppenderRef ref="CxfLogFileAppender"/>
+		</Logger>
+		<Logger name="org.hibernate" level="trace" additivity="false">
+			<AppenderRef ref="HibernateLogFileAppender"/>
+		</Logger -->
+		<Logger name="org.springframework" level="debug" additivity="false">
+			<AppenderRef ref="SpringLogFileAppender"/>
+		</Logger>
+		
+		<Root level="info">
+			<AppenderRef ref="ConsoleAppender"/>
+		</Root>
+	</Loggers>
+</Configuration>
