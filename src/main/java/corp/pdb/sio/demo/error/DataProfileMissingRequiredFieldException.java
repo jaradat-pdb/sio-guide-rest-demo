@@ -5,9 +5,9 @@ package corp.pdb.sio.demo.error;
  *
  */
 public class DataProfileMissingRequiredFieldException extends RuntimeException {
-	private static final long serialVersionUID = 2L;
+    private static final long serialVersionUID = -8496027371494805660L;
 
-	public DataProfileMissingRequiredFieldException(String message, Exception e) {
-		super(message, e, true, false);
-	}
+    public DataProfileMissingRequiredFieldException(String message, Exception e) {
+        super(message, e, true, false);
+    }
 }
