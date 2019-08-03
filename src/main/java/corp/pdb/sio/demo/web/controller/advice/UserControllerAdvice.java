@@ -16,11 +16,11 @@ import lombok.extern.slf4j.Slf4j;
 @ControllerAdvice
 @Slf4j
 public class UserControllerAdvice {
-	@ResponseBody
-	@ExceptionHandler(RegisteredUserDocNotFoundException.class)
-	@ResponseStatus(HttpStatus.NOT_FOUND)
-	public String registeredUserDocNotFoundExceptionHandler(RegisteredUserDocNotFoundException e) {
-		log.error("{}", e);
-		return e.getMessage();
-	}
+    @ResponseBody
+    @ExceptionHandler(RegisteredUserDocNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String registeredUserDocNotFoundExceptionHandler(RegisteredUserDocNotFoundException e) {
+        log.error("{}", e);
+        return e.getMessage();
+    }
 }

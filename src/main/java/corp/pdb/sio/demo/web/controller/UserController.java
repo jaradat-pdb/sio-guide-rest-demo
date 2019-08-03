@@ -22,35 +22,35 @@ import corp.pdb.sio.demo.model.repo.document.AppUserDocRepository;
  */
 @RestController
 public class UserController {
-	private final Logger log = LoggerFactory.getLogger(UserController.class);
-	private AppUserDocRepository<RegisteredUserDoc> registeredUserDocRepository;
+    private final Logger log = LoggerFactory.getLogger(UserController.class);
+    private AppUserDocRepository<RegisteredUserDoc> registeredUserDocRepository;
 
-	@Autowired
-	public UserController(@Qualifier("registeredUserDocRepository") AppUserDocRepository<RegisteredUserDoc> registeredUserDocRepository) {
-		this.registeredUserDocRepository = registeredUserDocRepository;
-	}
+    @Autowired
+    public UserController(@Qualifier("registeredUserDocRepository") AppUserDocRepository<RegisteredUserDoc> registeredUserDocRepository) {
+        this.registeredUserDocRepository = registeredUserDocRepository;
+    }
 
-	@GetMapping("/registeredUsers")
-	public List<RegisteredUserDoc> getAllRegisteredUsers() {
-		log.trace("Retrieving all registered users from system");
-		return registeredUserDocRepository.findAll();
-	}
+    @GetMapping("/registeredUsers")
+    public List<RegisteredUserDoc> getAllRegisteredUsers() {
+        log.trace("Retrieving all registered users from system");
+        return registeredUserDocRepository.findAll();
+    }
 
-	@PostMapping("/registerUser")
-	public RegisteredUserDoc registerNewUser(@RequestBody RegisteredUserDoc doc) {
-		log.trace("Registering with system new user: {}", doc);
-		return registeredUserDocRepository.save(doc);
-	}
+    @PostMapping("/registerUser")
+    public RegisteredUserDoc registerNewUser(@RequestBody RegisteredUserDoc doc) {
+        log.trace("Registering with system new user: {}", doc);
+        return registeredUserDocRepository.save(doc);
+    }
 
-	@GetMapping("/registeredUsers/fname={firstName}&lname={lastName}")
-	public List<RegisteredUserDoc> getRegisteredUserByFirstName(@PathVariable String firstName, @PathVariable String lastName) {
-		log.trace("Retrieving registered user from system via query by: {firstName: {}, lastName: {}}", firstName, lastName);
-		List<RegisteredUserDoc> docs = registeredUserDocRepository.findByUserType("REG_USER");
-		if(!(docs instanceof List<?>) || docs.isEmpty()) {
-			throw new RegisteredUserDocNotFoundException(String.format("%s %s", firstName, lastName));
-		}
-		
-		log.debug("Retrieved registered user from system: {}", docs);
-		return docs;
-	}
+    @GetMapping("/registeredUsers/fname={firstName}&lname={lastName}")
+    public List<RegisteredUserDoc> getRegisteredUserByFirstName(@PathVariable String firstName, @PathVariable String lastName) {
+        log.trace("Retrieving registered user from system via query by: {firstName: {}, lastName: {}}", firstName, lastName);
+        List<RegisteredUserDoc> docs = registeredUserDocRepository.findByUserType("REG_USER");
+        if(!(docs instanceof List<?>) || docs.isEmpty()) {
+            throw new RegisteredUserDocNotFoundException(String.format("%s %s", firstName, lastName));
+        }
+        
+        log.debug("Retrieved registered user from system: {}", docs);
+        return docs;
+    }
 }

@@ -21,11 +21,11 @@ import com.mongodb.MongoClient;
 @EnableMongoRepositories(basePackages = {"corp.pdb.sio.demo.model.repo.document"})
 @Profile(value = {"default", "mongo"})
 public class MongoDbDatasourceConfig {
-	@Primary
-	@Bean
-	@ConfigurationProperties(prefix = "spring.data.mongodb")
-	public MongoClient mongoClient() {
-//		return new MongoClient("localhost:27017");
-		return new MongoClient();
-	}
+    @Primary
+    @Bean
+    @ConfigurationProperties(prefix = "spring.data.mongodb")
+    public MongoClient mongoClient() {
+//        return new MongoClient("localhost:27017");
+        return new MongoClient();
+    }
 }

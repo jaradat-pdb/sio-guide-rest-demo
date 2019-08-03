@@ -10,22 +10,22 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = true)
 public class AppUserDoc extends BaseDoc {
-	private String userType;
+    private String userType;
 
-	public AppUserDoc() {
-		super();
-	}
+    public AppUserDoc() {
+        super();
+    }
 
-	/**
-	 * @return the userType
-	 */
-	String getUserType() {
-		return userType;
-	}
-	/**
-	 * @param userType the userType to set
-	 */
-	void setUserType(String userType) {
-		this.userType = userType;
-	}
+    /**
+     * @return the userType
+     */
+    String getUserType() {
+        return userType;
+    }
+    /**
+     * @param userType the userType to set
+     */
+    void setUserType(String userType) {
+        this.userType = userType;
+    }
 }

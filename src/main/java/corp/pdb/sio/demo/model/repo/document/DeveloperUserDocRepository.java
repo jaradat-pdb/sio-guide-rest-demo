@@ -11,6 +11,6 @@ import corp.pdb.sio.demo.model.data.document.DeveloperUserDoc;
  */
 @Repository
 interface DeveloperUserDocRepository extends AppUserDocRepository<DeveloperUserDoc> {
-//	public List<DeveloperUserDoc> findByFavoriteLang(String favoriteLang);
-//	public DeveloperUserDoc findByFirstNameAndLastNameAndFavoriteLang(String firstName, String lastName, String favoriteLang);
+//    public List<DeveloperUserDoc> findByFavoriteLang(String favoriteLang);
+//    public DeveloperUserDoc findByFirstNameAndLastNameAndFavoriteLang(String firstName, String lastName, String favoriteLang);
 }

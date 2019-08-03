@@ -5,6 +5,6 @@ package corp.pdb.sio.demo.model.data.profile;
  *
  */
 public interface Profile {
-	@Override
-	public String toString();
+    @Override
+    public String toString();
 }
