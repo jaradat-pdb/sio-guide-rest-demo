@@ -9,7 +9,7 @@ public class RegisteredUserDocNotFoundException extends RuntimeException {
     private static final String EX_MSG_TEMPLATE = "Could not find a registered user in system via query by: {name: %s}";
 
     public RegisteredUserDocNotFoundException(String name) {
-        super(String.format(EX_MSG_TEMPLATE, name), new NullPointerException(String.format(EX_MSG, name)), false, false);
+        super(String.format(EX_MSG_TEMPLATE, name), new NullPointerException(String.format(EX_MSG_TEMPLATE, name)), false, false);
     }
 
     public RegisteredUserDocNotFoundException(String name, Exception e) {
