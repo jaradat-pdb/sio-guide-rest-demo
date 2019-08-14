@@ -6,9 +6,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import corp.pdb.sio.demo.model.data.document.DeveloperUserDoc;
-import corp.pdb.sio.demo.model.data.document.RegisteredUserDoc;
-import corp.pdb.sio.demo.model.repo.document.AppUserDocRepository;
+import corp.pdb.sio.demo.data.model.document.DeveloperUserDoc;
+import corp.pdb.sio.demo.data.model.document.RegisteredUserDoc;
+import corp.pdb.sio.demo.data.repo.document.AppUserDocRepository;
 /* Generates a logger (based on Slf4j LoggerFactory) object by the name of log */
 import lombok.extern.slf4j.Slf4j;
 

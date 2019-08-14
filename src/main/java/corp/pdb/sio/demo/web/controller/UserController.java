@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import corp.pdb.sio.demo.data.model.document.RegisteredUserDoc;
+import corp.pdb.sio.demo.data.repo.document.AppUserDocRepository;
 import corp.pdb.sio.demo.error.RegisteredUserDocNotFoundException;
-import corp.pdb.sio.demo.model.data.document.RegisteredUserDoc;
-import corp.pdb.sio.demo.model.repo.document.AppUserDocRepository;
 
 /**
  * @author jaradat-pdb

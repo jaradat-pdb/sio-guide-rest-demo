@@ -1,6 +1,6 @@
-package corp.pdb.sio.demo.model.repo.document;
+package corp.pdb.sio.demo.data.repo.document;
 
-import corp.pdb.sio.demo.model.data.document.RegisteredUserDoc;
+import corp.pdb.sio.demo.data.model.document.RegisteredUserDoc;
 
 /**
  * 

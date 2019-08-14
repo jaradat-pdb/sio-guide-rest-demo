@@ -5,4 +5,4 @@
  * @author jaradat-pdb
  *
  */
-package corp.pdb.sio.demo.model.repo.entity;
+package corp.pdb.sio.demo.data.repo.entity;

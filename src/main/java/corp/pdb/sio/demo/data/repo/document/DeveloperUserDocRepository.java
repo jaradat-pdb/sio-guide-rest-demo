@@ -1,8 +1,8 @@
-package corp.pdb.sio.demo.model.repo.document;
+package corp.pdb.sio.demo.data.repo.document;
 
 import org.springframework.stereotype.Repository;
 
-import corp.pdb.sio.demo.model.data.document.DeveloperUserDoc;
+import corp.pdb.sio.demo.data.model.document.DeveloperUserDoc;
 
 /**
  * 

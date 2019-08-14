@@ -1,4 +1,4 @@
-package corp.pdb.sio.demo.model.data.document;
+package corp.pdb.sio.demo.data.model.document;
 
 import java.math.BigInteger;
 import java.util.Arrays;
@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.google.gson.Gson;
 
-import corp.pdb.sio.demo.model.data.profile.impl.BasicInfoProfile;
+import corp.pdb.sio.demo.data.model.profile.impl.BasicInfoProfile;
 
 /**
  * A document type model representation of a <code>REGISTERED_USER</code> with the system.
@@ -27,7 +27,7 @@ public class RegisteredUserDoc extends AppUserDoc {
 
     RegisteredUserDoc() {}
     /**
-     * Generates a new {@link RegisteredUserDoc} from the provided {@link corp.pdb.sio.demo.model.data.profile.impl.BasicInfoProfile basicInfoProfile} parameter.
+     * Generates a new {@link RegisteredUserDoc} from the provided {@link corp.pdb.sio.demo.data.model.profile.impl.BasicInfoProfile basicInfoProfile} parameter.
      * <br>
      * @param basicInfoProfile must not be {@literal null} or empty.
      */
@@ -38,7 +38,7 @@ public class RegisteredUserDoc extends AppUserDoc {
     }
     /**
      * Uses the provided firstName and lastName parameters to:
-     * <li>first generate a {@link corp.pdb.sio.demo.model.data.profile.impl.BasicInfoProfile basicInfoProfile}</li>
+     * <li>first generate a {@link corp.pdb.sio.demo.data.model.profile.impl.BasicInfoProfile basicInfoProfile}</li>
      * <li>then generate a new {@link RegisteredUserDoc}</li>
      * <br>
      * @param fName must not be {@literal null} or empty.
@@ -49,7 +49,7 @@ public class RegisteredUserDoc extends AppUserDoc {
     }
     /**
      * Uses the provided firstName, lastName, and middleName parameters to:
-     * <li>first generate a {@link corp.pdb.sio.demo.model.data.profile.impl.BasicInfoProfile basicInfoProfile}</li>
+     * <li>first generate a {@link corp.pdb.sio.demo.data.model.profile.impl.BasicInfoProfile basicInfoProfile}</li>
      * <li>then generate a new {@link RegisteredUserDoc}</li>
      * <br>
      * @param fName must not be {@literal null} or empty.

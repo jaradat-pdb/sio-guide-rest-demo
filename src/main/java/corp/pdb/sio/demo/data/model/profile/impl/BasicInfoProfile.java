@@ -1,4 +1,4 @@
-package corp.pdb.sio.demo.model.data.profile.impl;
+package corp.pdb.sio.demo.data.model.profile.impl;
 
 import java.io.Serializable;
 import java.text.ParseException;
@@ -9,8 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.util.Assert;
 
+import corp.pdb.sio.demo.data.model.profile.Profile;
 import corp.pdb.sio.demo.error.DataProfileMissingRequiredFieldException;
-import corp.pdb.sio.demo.model.data.profile.Profile;
 import lombok.EqualsAndHashCode;
 import lombok.extern.slf4j.Slf4j;
 

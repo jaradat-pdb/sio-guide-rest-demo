@@ -1,4 +1,4 @@
-package corp.pdb.sio.demo.model.data.document;
+package corp.pdb.sio.demo.data.model.document;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.mongodb.core.mapping.Document;

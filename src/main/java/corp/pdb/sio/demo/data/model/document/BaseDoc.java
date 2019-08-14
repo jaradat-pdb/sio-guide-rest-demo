@@ -1,4 +1,4 @@
-package corp.pdb.sio.demo.model.data.document;
+package corp.pdb.sio.demo.data.model.document;
 
 import java.math.BigInteger;
 

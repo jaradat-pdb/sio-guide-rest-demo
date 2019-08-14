@@ -1,4 +1,4 @@
-package corp.pdb.sio.demo.model.data.profile;
+package corp.pdb.sio.demo.data.model.profile;
 
 /**
  * @author jaradat-pdb

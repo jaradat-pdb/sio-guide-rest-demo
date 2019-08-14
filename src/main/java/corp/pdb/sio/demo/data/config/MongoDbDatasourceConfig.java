@@ -1,4 +1,4 @@
-package corp.pdb.sio.demo.model.config;
+package corp.pdb.sio.demo.data.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
