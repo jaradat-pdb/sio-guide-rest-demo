@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "sio.app.default-dir",
+  "type": "java.lang.String",
+  "description": "A description for 'sio.app.default-dir'"
+}]}
