@@ -1,7 +1,5 @@
 package corp.pdb.sio.demo.data.repo.document;
 
-import org.springframework.stereotype.Repository;
-
 import corp.pdb.sio.demo.data.model.document.DeveloperUserDoc;
 
 /**
@@ -9,8 +7,6 @@ import corp.pdb.sio.demo.data.model.document.DeveloperUserDoc;
  * @author jaradat-pdb
  *
  */
-@Repository
 interface DeveloperUserDocRepository extends AppUserDocRepository<DeveloperUserDoc> {
-//    public List<DeveloperUserDoc> findByFavoriteLang(String favoriteLang);
-//    public DeveloperUserDoc findByFirstNameAndLastNameAndFavoriteLang(String firstName, String lastName, String favoriteLang);
+    /* Extension of AppUserDocRepository interface for DeveloperUserDoc documents */
 }
